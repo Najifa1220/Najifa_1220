@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    /* Sticky Header */
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      padding: 18px;
+      background-color: #2ecc71;
+      color: white;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      margin: 30px auto;
+      max-width: 900px;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    /* Parent */
+    .parent-container {
+      position: relative;
+      height: 350px;
+      margin-top: 30px;
+      padding: 20px;
+      border: 3px dashed #333;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .box {
+      width: 150px;
+      height: 60px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* 1. Static */
+    .static-box {
+      position: static;
+      background-color: #34495e;
+    }
+
+    /* 2. Relative */
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 40px;
+      background-color: #3498db;
+    }
+
+    /* 3. Absolute */
+    .absolute-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #e74c3c;
+    }
+
+    /* Fixed Button */
+    .fixed-box {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      padding: 15px 20px;
+      background-color: #9b59b6;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .fixed-box:hover {
+      background-color: #8e44ad;
+    }
+
+    .info {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .info h2 {
+      color: #2c3e50;
+    }
+
+    .info p {
+      line-height: 1.7;
+    }
+
+    .space {
+      height: 600px;
+      padding: 30px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Sticky Position -->
+  <div class="sticky-box">
+    📌 CSS Position Demo
+  </div>
+
+  <div class="container">
+
+    <h1>CSS Position Property</h1>
+
+    <p>
+      Scroll the page and observe how each position behaves.
+    </p>
+
+    <!-- Parent Container -->
+    <div class="parent-container">
+
+      <!-- Static -->
+      <div class="box static-box">
+        Static Box
+      </div>
+
+      <!-- Relative -->
+      <div class="box relative-box">
+        Relative Box
+      </div>
+
+      <!-- Absolute -->
+      <div class="box absolute-box">
+        Absolute Box
+      </div>
+
+    </div>
+
+    <!-- Information -->
+    <div class="info">
+
+      <h2>Position Types</h2>
+
+      <p>
+        <b>Static:</b> Default position. Top, left, right and bottom
+        properties do not work.
+      </p>
+
+      <p>
+        <b>Relative:</b> The element moves relative to its original
+        position.
+      </p>
+
+      <p>
+        <b>Absolute:</b> The element is positioned relative to its
+        nearest positioned ancestor.
+      </p>
+
+      <p>
+        <b>Fixed:</b> The element stays fixed relative to the browser
+        window even when scrolling.
+      </p>
+
+      <p>
+        <b>Sticky:</b> The element behaves normally until it reaches
+        the specified position, then it sticks there.
+      </p>
+
+    </div>
+
+    <!-- Extra Space for Scrolling -->
+    <div class="space">
+      <h2>⬇ Scroll Down ⬇</h2>
+      <p>Observe the Sticky Header and Fixed Button.</p>
+    </div>
+
+  </div>
+
+  <!-- Fixed Position -->
+  <button class="fixed-box" onclick="window.scrollTo(0, 0)">
+    ↑ Back to Top
+  </button>
+
+</body>
+
+</html>
+
