@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      background: #dddddd;
+      padding: 25px;
+      border-radius: 999px;
+      
+      
+      
+    }
+
+    .container div {
+      flex: 1 1 100px;
+      /* grow shrink basis*/
+      padding: 30px;
+      background: rgb(180, 70, 164);
+      color: white;
+      border-radius: 999px;
+      
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div>   Naju </div>
+    <div>   Mehu</div>
+    <div>   Puspi </div>
+    <div>   Adu </div>
+  </div>
+
+</body>
+
+</html>
