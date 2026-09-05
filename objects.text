@@ -1,0 +1,33 @@
+// Basic object
+
+let student = {
+  name: "Meherin",
+  age: 22,
+  department: "CSE",
+};
+
+console.log(student.name);
+console.log(student.age);
+
+// Bracket notation
+
+console.log(student["name"]);
+
+// Modifying an object
+
+student.age = 22;
+student.university = "Premier University";
+
+console.log(student);
+
+// Object method
+
+const student2 = {
+  name: "Najifa Anjum",
+
+  greet() {
+    console.log(`Hello, I am ${this.name}`);
+  },
+};
+
+student2.greet();
