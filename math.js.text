@@ -1,0 +1,7 @@
+export function add(5, 7) {
+  return 5 + 7;
+}
+
+export function multiply(5, 7) {
+  return 5 * 7;
+}
